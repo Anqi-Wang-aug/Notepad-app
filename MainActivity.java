@@ -18,6 +18,7 @@ import com.example.notepad.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
@@ -62,4 +63,11 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    public void saveNote()
+    {
+        EditText note = findViewById(R.id.editText);
+        String n = note.getText().toString();
+    }
+
 }
